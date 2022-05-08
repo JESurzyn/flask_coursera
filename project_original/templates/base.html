@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--this is the main html template that gets extended in the other
+route files-->
+<html lang="en">
+<head>
+        <title>Title of the website</title>
+<!--        <meta charset="UTF-8">-->
+</head>
+<body>
+    <h1>Title of the website</h1>
+    <h3>Subheader: something something</h3>
+    <hr>
+    <ul>
+        <li><a href ="{{ url_for('index') }}">Tasks</a></li>
+        <li><a href = "{{ url_for('add') }}">Add New</a></li>
+    </ul>
+
+{% block main %}
+{% endblock main%}
+
+
+</html>
+</body>

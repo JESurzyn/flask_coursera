@@ -1,0 +1,14 @@
+<!--the main html is extended from base.html-->
+{% extends "base.html" %}
+
+{% block main %}
+<!--<p>Some content on the home page!</p>-->
+
+<!--listing tasks on the index page from the database-->
+<h1>Tasks</h1>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task.title }} created on {{ task.date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
